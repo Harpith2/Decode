@@ -368,7 +368,7 @@ const Dashboard = () => {
            How can et help you today?
          </p>
          <div className="powerful-tools-banner">
-           Upload review sheets, textbook chapters, slides & any other document
+           Discuss coding concepts with Coversational AI, Search smarter with Gen AI or practice coding instantly!
          </div>
        </header>
 
