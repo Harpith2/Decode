@@ -291,7 +291,7 @@ const Dashboard = () => {
                              className="start-learning-button success"
                              onClick={() => navigate('/learn')}
                            >
-                             Start Learning with et
+                             Start Learning
                            </button>
                          </div>
                        ) : (
