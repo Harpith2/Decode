@@ -385,7 +385,7 @@ const Dashboard = () => {
            onClick={() => isPremium && handleCardClick('DSA')}
          >
            <div className="card-content">
-             DSA
+             Practice
            </div>
            {!isPremium && (
              <div className="premium-tooltip">Upgrade to Premium to unlock this feature</div>
