@@ -365,7 +365,7 @@ const Dashboard = () => {
            Real learning starts here.
          </p>
          <p className="App-subtext">
-           How can et help you today?
+           How do you want to learn today?
          </p>
          <div className="powerful-tools-banner">
            Discuss coding concepts with Coversational AI, Search smarter with Gen AI or practice coding instantly!
