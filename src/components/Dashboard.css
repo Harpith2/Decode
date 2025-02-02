@@ -1,0 +1,649 @@
+/* Keep your existing logout button styles */
+.logout-button {
+    position: absolute;
+    top: 18px;
+    right: 72px;  /* Changed from a larger value to move it left */
+    padding: 4px 12px;
+    background: rgb(242,240,233);
+    border: 1px solid #5c554b;
+    border-radius: 20px;
+    color: #5c554b; 
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Clash Display', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .logout-button:hover {
+    transform: translateY(-2px);
+    background: rgba(169, 215, 217, 0.2);
+  }
+  
+  /* Add new styles from App.css */
+  body {
+    font-family: 'Sentient', sans-serif;
+    margin: 0; /* Ensure no extra space around the body */
+    padding: 0;
+    height: 100%;
+    background-image: 
+     url('bg1.jpg');
+     
+    background-size: cover; /* Makes the background cover the entire page */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  
+  }
+  
+  .App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .App-tile {
+    background: rgb(242,240,233);
+    backdrop-filter: blur(40px) saturate(120%);
+    -webkit-backdrop-filter: blur(40px) saturate(120%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 1400px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    will-change: transform, background-color, box-shadow;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    border: 1px solid #5c554b;
+  
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 12px;  /* Align with left edge */
+    top: 13px;   /* Align with top edge, same as premium toggle */
+  }
+  
+  .logo-image {
+    width: 25px;  /* Adjusted size to match header height */
+    height: 25px;
+    object-fit: contain;
+  }
+  
+  .etai-logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Clash Display', sans-serif;
+    margin: 0;  /* Remove margins */
+  }
+  
+  .etai-logo em {
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Update the greeting text positioning */
+.greeting-text {
+  
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -150px;
+    color: #5c554b;
+    font-family: 'Sentient', sans-serif;
+  }
+  
+  /* Update the typing text positioning */
+  .typing-text {
+    font-family: 'Sentient', sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    animation: typing 4s steps(30) infinite;
+  }
+
+  /* Typing animation */
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Blinking cursor animation */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* Update the App-subtext positioning */
+  .App-subtext {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-family: 'Sentient', sans-serif;
+    color: #5c554b;
+    margin-top: 130px;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    color: rgb(49, 108, 108);
+  }
+  
+  .highlight2 {
+    font-size: 25px;
+    background-color: rgb(240, 237, 237);
+    font-style: italic;
+    padding: 8px 15px;
+    border-radius: 50%;
+    border: 0.5px solid;
+    display: inline-block;
+    line-height: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .powerful-tools-banner {
+    position: absolute;
+    top: calc(50% + 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, rgba(242,240,233,0.95), rgba(242,240,233,0.85));
+    border: 0.5px solid #5c554b;
+    border-radius: 50px;
+    padding: 8px 25px;
+    font-size: 16px;
+    color: #5c554b;
+    min-width: 650px;
+    box-shadow: 
+      0 4px 20px rgba(147, 112, 219, 0.1),
+      0 0 30px rgba(147, 112, 219, 0.2),
+      inset 0 0 25px rgba(147, 112, 219, 0.15);
+    backdrop-filter: blur(5px);
+    margin-top: 120px;
+    font-family: 'Sentient', sans-serif;
+  }
+  
+  .App-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    position: absolute;
+    bottom: 40px;
+    width: 650px;
+    margin: 0 auto;
+    font-family: 'Sentient', sans-serif;
+
+  }
+
+  .App-card {
+    position: relative;
+    /* Warm beige gradient */
+    background: linear-gradient(135deg, 
+      rgba(169, 215, 217, 0.7), 
+      rgba(242,240,233,255)
+    );
+    color: #4a4a4a;
+    border: 0.5px solid;
+    border-color: #5c554b;
+    /* Reduced border-radius for rounded rectangle */
+    border-radius: 16px;
+    /* Adjusted dimensions for rectangle shape */
+    width: auto;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    backdrop-filter: blur(8px);
+    /* Softer shadow that works with beige */
+    box-shadow: 
+      0 8px 20px rgba(185, 178, 165, 0.15),
+      inset 0 0 16px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .App-card:hover {
+    background: linear-gradient(135deg, rgba(250, 247, 240, 0.8), rgba(240, 235, 225, 0.9));
+    transform: translateY(-5px);
+    box-shadow: 
+      0 12px 28px rgba(185, 178, 165, 0.25),
+      inset 0 0 16px rgba(255, 255, 255, 0.3);
+    color: #000 !important;
+  }
+  
+  .premium-card {
+    background: linear-gradient(135deg, rgba(169, 215, 217, 0.9), rgba(242,240,233,0.95)) !important;
+    border: 1px solid rgba(147, 112, 219, 0.3) !important;
+    box-shadow: 
+      0 8px 20px rgba(147, 112, 219, 0.15),
+      inset 0 0 16px rgba(147, 112, 219, 0.1) !important;
+  }
+  
+  .premium-card::before {
+    content: '★';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #6e675b;
+    opacity: 0.7;
+  }
+  
+  .premium-toggle {
+    position: absolute;
+    right: 120px;
+    left: 50px;  /* Significantly increased to move it more to the right */
+    top: 90px;    /* Match the top alignment of other elements */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    z-index: 1000;  /* Ensure it's above other elements */
+  }
+  
+  .toggle-switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-switch.active {
+    background-color: #6ed2bc;
+  }
+  
+  .toggle-switch::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-switch.active::before {
+    transform: translateX(20px);
+  }
+  
+  .toggle-label {
+    font-size: 0.9rem;
+    color: #5c554b;
+  }
+  
+  /* Modal styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: rgb(242,240,233);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #5c554b;
+    width: 80%;
+    max-width: 800px;
+    min-height: 600px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #5c554b;
+    padding: 5px;
+  }
+  
+  .modal-title {
+    font-family: 'Sentient', sans-serif;
+    font-size: 24px;
+    color: #5c554b;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .modal-body {
+    color: #5c554b;
+    font-family: 'Sentient', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .modal-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upload-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgb(242,240,233);
+    border: 1px solid #5c554b;
+    border-radius: 25px;
+    color: #5c554b;
+    font-family: 'Sentient', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background: rgba(169, 215, 217, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .start-learning-button {
+    padding: 12px 30px;
+    background: #000000;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    font-family: 'Sentient', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .start-learning-button:hover {
+    transform: translateY(-2px);
+    background: #1a1a1a;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .upload-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(169, 215, 217, 0.2);
+    border-radius: 8px;
+    color: #5c554b;
+    font-size: 14px;
+  }
+  
+  /* Add dark mode specific styles */
+  .logout-button.dark {
+    background: #2d2d2d;
+    border: 1px solid #5c554b;
+    color: #ffffff;
+  }
+  
+  .logout-button.dark:hover {
+    background: #3d3d3d;
+  }
+  
+  .change-file-button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid #5c554b;
+    border-radius: 4px;
+    color: #5c554b;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .change-file-button:hover {
+    background: rgba(92, 85, 75, 0.1);
+  }
+  
+  /* For dark mode */
+  .dark .change-file-button {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  
+  .dark .change-file-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .success-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .start-learning-button.success {
+    background: rgb(242,240,233);
+    border: 1px solid #5c554b;
+    color: #5c554b;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Sentient', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .start-learning-button.success:hover {
+    background: rgba(169, 215, 217, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Dark mode styles */
+  .dark .start-learning-button.success {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #ffffff;
+  }
+  
+  .dark .start-learning-button.success:hover {
+    background: #3d3d3d;
+  }
+  
+  .plan-indicator {
+    position: absolute;
+    right: 1100px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 500;
+    z-index: 1000;
+    font-family: 'Clash Display', sans-serif;
+    border: 1px solid #5c554b;
+    transition: all 0.3s ease;
+  }
+  
+  .plan-indicator.free {
+    background: rgb(242,240,233);
+    color: #5c554b;
+  }
+  
+  .plan-indicator.premium {
+    background: rgb(242,240,233);
+    color: #5c554b;
+  }
+  
+  .plan-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  
+  .plan-dot.free {
+    background-color: #5c554b;
+  }
+  
+  .plan-dot.premium {
+    background-color: #6ed2bc;
+  }
+  
+  .premium-tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(45, 45, 45, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .disabled:hover .premium-tooltip {
+    opacity: 1;
+  }
+  
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .free-banner {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #5c554b;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    transform: rotate(15deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  /* Add hover effect */
+  .App-card:hover .free-banner {
+    transform: rotate(15deg) scale(1.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Dark mode support */
+  .dark .plan-indicator.free {
+    background: #2d2d2d;
+    color: #ffffff;
+    border-color: #404040;
+  }
+  
+  .dark .plan-indicator.premium {
+    background: rgba(169, 215, 217, 0.9);
+    color: #2d2d2d;
+    border-color: rgba(169, 215, 217, 0.9);
+  }
+  
+  .dark .plan-dot.free {
+    background-color: #ffffff;
+  }
+  
+  .App-card.no-star::before {
+    display: none;  /* Remove the star */
+  }
+  
+  .dashboard-theme-toggle {
+    position: absolute;
+    top: 96.8%;
+    left: 58px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid #5c554b;
+    background: rgb(242,240,233);
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .dashboard-theme-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  /* Dark mode styles */
+  .dark .dashboard-theme-toggle {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #ffffff;
+  }
+  
+  
+  
+  

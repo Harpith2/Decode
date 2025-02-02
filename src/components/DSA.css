@@ -1,0 +1,157 @@
+/* General Styles */
+.DSA {
+    font-family: 'Avenir Light', Arial, sans-serif; /* Avenir Light font */
+  text-align: center;
+  padding: 20px;
+  background-color: #FBF9F5;
+}
+
+.title {
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 26px;
+    font-size: 1.5rem;  /* Increased font size */
+    font-weight: 700;   /* Made text bolder */
+    font-family: 'Sentient', sans-serif;  /* Matching the font family with other headers */
+}
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .styled-button {
+    padding: 7px 19px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #333;
+    border-radius: 50px;
+    background-color: #f3dfd2;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .styled-button:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .styled-button:nth-child(even) {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .styled-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .styled-button:focus {
+    border-color: #6ed2bc;
+    box-shadow: 0 0 40px rgba(138, 255, 224, 1);  /* Increased blur radius to 20px */
+  
+  }
+  
+  .visualization {
+    
+    
+    padding: 20px;
+    background-color: #F2EEE6;
+    border-radius: 10px;
+    border: 1px solid #000000;  /* Thin border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   
+  }
+  @keyframes shineEffect {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  /* Existing styles in App.css */
+  
+  /* Add these new styles */
+  .flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .mt-24 {
+    margin-top: 6rem;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .border {
+    border-width: 1px;
+  }
+  
+  .border-gray-300 {
+    border-color: rgb(209, 213, 219);
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+  
+  .text-xl {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  }
+  
+  .font-medium {
+    font-weight: 1000;
+  }
+  
+  .text-gray-700 {
+    color: rgb(55, 65, 81);
+  }
+
+.back-button {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    padding: 4px 12px;
+    background: rgb(242,240,233);
+    border: 1px solid #5c554b;
+    border-radius: 20px;
+    color: #5c554b;
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Clash Display', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+    background: rgba(242,240,233,0.9);
+}
